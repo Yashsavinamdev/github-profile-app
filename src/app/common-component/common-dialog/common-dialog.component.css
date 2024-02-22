@@ -1,0 +1,57 @@
+/* Styling for the common dialog container */
+.common-info {
+    box-sizing: border-box;
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the common dialog header */
+  .common-info-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .header-desc {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Styling for the common dialog body */
+  .common-info-body {
+    margin-top: 15px;
+  }
+  
+  /* Styling for the common dialog footer */
+  .common-info-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .btn-outline-primary {
+    border: 1px solid #3498db;
+    color: #3498db;
+    background-color: #fff;
+  }
+  
+  .btn-primary {
+    background-color: #3498db;
+    color: #fff;
+  }
+  

@@ -2,10 +2,13 @@ import { ProfileDisplayComponent } from './components/profile-display/profile-di
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RepoDisplayComponent } from './components/repo-display/repo-display.component';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './common-component/home/home.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'profile', component: ProfileDisplayComponent },
-  { path: 'repositories/:username', component: RepoDisplayComponent },
 ];
 
 @NgModule({

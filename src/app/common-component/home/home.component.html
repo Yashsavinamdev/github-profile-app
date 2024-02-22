@@ -1,0 +1,26 @@
+
+<div class="welcome-section">
+    <h1 class="display-4">Welcome to GitHub!</h1>
+    <p class="lead">Explore and discover GitHub profiles with ease.</p>
+    <hr class="my-4">
+    <p>Enter a username in the search bar below to search a profile:-</p>
+  </div>
+  
+  <!-- Search Input Section -->
+  <div class="input-group mb-4">
+    <mat-form-field appearance="fill" class="mr-sm-2">
+      <mat-label>Search:</mat-label>
+      <input matInput
+             type="text"
+             id="searchInput"
+             [(ngModel)]="searchQuery"
+             placeholder="Enter username"
+             class="custom-input">
+    </mat-form-field>
+    <div class="input-group-append">
+      <button mat-icon-button color="accent" type="submit" (click)="searchUser()">
+        <mat-icon class="larger-icon">search</mat-icon>
+      </button>
+    </div>
+  </div>
+  

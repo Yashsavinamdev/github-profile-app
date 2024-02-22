@@ -1,0 +1,35 @@
+<div class="common-info">
+    <div class="common-info-header">
+      <img [src]="data.icon" class="custom-icon" alt="icon-verified" />
+      <p class="header-desc">{{ data.title }}</p>
+    </div>
+  
+    <div class="common-info-body">
+      <p>{{ data.id }}</p>
+      <p *ngIf="!isArray(data.message)">{{ data.message}}</p>
+      <ng-container *ngIf="isArray(data.message)">
+        <p *ngFor="let msg of data.message">{{ msg }}</p>
+      </ng-container>
+    </div>
+  
+    <div class="common-info-footer">
+      <button
+        mat-dialog-close
+        class="btn btn-outline-primary mr-2 px-4"
+        *ngIf="data.secondaryBtnText"
+        (click)="onCancel()"
+      >
+        {{ data.secondaryBtnText }}
+      </button>
+  
+      <button
+        mat-dialog-close
+        class="btn btn-primary"
+        [mat-dialog-close]="true"
+        (click)="onSubmit()"
+      >
+        {{ data.primaryBtnText }}
+      </button>
+    </div>
+  </div>
+  

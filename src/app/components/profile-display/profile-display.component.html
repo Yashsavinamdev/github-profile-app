@@ -1,0 +1,26 @@
+<!-- profile-display.component.html -->
+<app-loader *ngIf="isLoading"></app-loader>
+<div class="profile-container" *ngIf="!showRepos">
+  <div class="profile-header">
+    <img class="avatar" src="{{ profileData.avatar_url }}" alt="User Avatar" />
+    <h2>{{ profileData.name }}</h2>
+    <p>{{ profileData.bio }}</p>
+    <p>Repositories: {{ profileData.public_repos }}</p>
+  </div>
+
+  <div *ngIf="profileData.public_repos === 0">
+    <p>No repositories found for this user.</p>
+  </div>
+
+  <div class="view-repos-link" *ngIf="profileData.public_repos !== 0">
+    <a (click)="loadRepositories()">View All Repositories</a>
+  </div>
+</div>
+
+<div class="profile-container" *ngIf="showRepos">
+  <app-repo-display
+    [profileData]="profileData"
+    [userName]="userName"
+    (showReposChange)="showOnlyProfile()"
+  ></app-repo-display>
+</div>

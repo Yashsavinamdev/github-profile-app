@@ -1,0 +1,31 @@
+/* app-layout.component.css */
+
+.sidebar {
+    background-color: #343a40;
+    color: #ffffff;
+    padding-top: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .welcome-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center; /* Center text within welcome section */
+  }
+  
+  .github-logo {
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-btn {
+    background-color: #007bff;
+    margin-bottom: 10px;
+  }
+  

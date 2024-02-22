@@ -1,1 +1,23 @@
+<app-loader *ngIf="isLoading"></app-loader>
 
+<div class="repo-container">
+    <button mat-icon-button class="back-to-profile" (click)="goBackToProfile()">
+      <mat-icon>arrow_back</mat-icon> Back to Profile
+    </button>
+  
+    <div *ngIf="profileData.public_repos > 0">
+      <h3>Repositories:</h3>
+      <div class="repo-card" *ngFor="let repo of reposData | slice: (currentPage-1)*pageSize : currentPage*pageSize">
+        <h4>{{ repo?.name }}</h4>
+        <p>{{ repo?.description }}</p>
+      </div>
+  
+      <app-pagination
+        [currentPage]="currentPage"
+        [pageSize]="pageSize"
+        [totalItems]="profileData.public_repos"
+        (pageChange)="onPageChange($event)"
+      ></app-pagination>
+    </div>
+  </div>
+  

@@ -1,0 +1,87 @@
+body {
+    padding-top: 64px; /* Navbar-height */
+  }
+  
+  .navbar {
+    box-shadow: 0 4px 2px -2px gray; /* Example box shadow, adjust as needed */
+  }
+  
+  .container {
+    max-width: 960px; /* Container Width */
+  }
+  
+
+  
+  .main-content {
+    background-color: #f8f9fa; /* Light gray background for the main content area */
+    padding: 20px; /* Add padding for the main content */
+  }
+  
+  .welcome-section {
+    background-color: #ffffff; /* White background for the welcome container */
+    padding: 20px; /* Add padding for the welcome container */
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+  
+  .input-group {
+    margin-bottom: 20px; /* Add margin for spacing between the input and other elements */
+    padding: 20px;
+  }
+  
+  .mat-form-field {
+    width: 100%; /* Make the input field take up the full width */
+    margin-bottom: 10px; /* Add margin for spacing between the input and button */
+  }
+  
+  .btn-outline-success {
+    margin-top: 2px;
+  }
+  
+  .input-group-append button {
+    margin-left: 5px;
+  }
+  
+  /* Style the icon button */
+  .input-group-append button {
+    border: 1px solid #007bff; /* Border color for button */
+    background-color: #007bff; /* Background color for button */
+    color: #ffffff; /* Text color for button */
+    border-radius: 4px; /* Border radius for button */
+    padding: 8px; /* Padding for button */
+  }
+  
+  .input-group-append button:hover {
+    background-color: #0056b3; /* Hover background color for button */
+  }
+  
+  /* Adjust the icon size and center it within the button */
+  .input-group-append button {
+    margin-left: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-group-append {
+      height: 40px; /* Adjust the height as needed */
+      display: flex;
+      align-items: center;
+    }
+    
+  .larger-icon {
+    font-size: 1.5em; /* Adjust the icon size */
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (min-width: 768px) {
+    .mat-form-field {
+      width: 50%; /* Width for larger screens */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .mat-form-field {
+      width: 35%; /* Width for even larger screens */
+    }
+  }
+  
