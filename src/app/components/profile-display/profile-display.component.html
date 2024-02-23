@@ -1,6 +1,10 @@
 <app-loader *ngIf="isLoading"></app-loader>
 <div class="profile-container" *ngIf="!showRepos">
+
   <div class="profile-header">
+    <button mat-icon-button class="back-to-profile" style="display: flex; align-items: self-start;" (click)="goBackToProfile()">
+      <mat-icon>arrow_back</mat-icon> Back to Home
+    </button>
     <img class="avatar" src="{{ profileData.avatar_url }}" alt="User Avatar" />
     <h2>{{ profileData.name }}</h2>
     <p>{{ profileData.bio }}</p>

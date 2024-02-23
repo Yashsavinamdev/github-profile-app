@@ -64,4 +64,8 @@ export class ProfileDisplayComponent implements OnInit {
   showOnlyProfile() {
     this.showRepos = false;
   }
+
+  goBackToProfile() {
+    this.router.navigate(['/home']);
+  }
 }

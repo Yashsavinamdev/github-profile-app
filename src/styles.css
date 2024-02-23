@@ -7,6 +7,24 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+.back-to-profile mat-icon {
+  margin-right: 5px;
+}
+.back-to-profile {
+  cursor: pointer;
+  padding: 10px 15px;
+  display: flex;  
+  align-items: center;
+  color: #3498db;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  background-color: #f8f9fa; /* Add a subtle background color */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.back-to-profile:hover {
+  background-color: #e8e9ea; /* Change background color on hover */
+}
 mat-spinner {
   margin: 0 auto;
 }
