@@ -1,27 +1,46 @@
-# GithubProfileApp
+# GitHub User Profiles and Repositories Viewer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+This Angular application allows users to search for GitHub user profiles, view their details, and explore their repositories. The project is built using the latest version of Angular and leverages Angular Material for a user-friendly and responsive UI.
 
-## Development server
+## Core Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. **Home/Search Page:**
 
-## Code scaffolding
+   - User enters a GitHub username in the search box.
+   - If the user is not found, a dialog saying "User not found" is displayed.
+   - If found, navigate to the profile page passing the username in query params.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. **Profile Page:**
 
-## Build
+   - Displays user information: name, avatar, bio, and the number of public repositories.
+   - If public repositories are greater than 0, a button "View All Repositories" is displayed.
+   - Includes a back button to return to the home/search page if required.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Repository List Page:**
 
-## Running unit tests
+   - Accessible by clicking "View All Repositories" on the profile page.
+   - Displays a paginated list of the user's GitHub repositories.
+   - Each repository card includes name, description, and topics (if available).
+   - Pagination with 3 repositories per page.
+   - Includes a back button to return to the profile page.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. **Responsive UI:**
+   - Utilizes Angular Material for a professional and responsive user interface.
 
-## Running end-to-end tests
+## Setup Instructions
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Follow these steps to set up and run the application:
 
-## Further help
+### Prerequisites
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Make sure you have the following installed:
+
+- Node.js and npm: [Download here](https://nodejs.org/)
+- Angular CLI: Install globally using `npm install -g @angular/cli`
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/your-username/github-profiles-viewer.git
+cd github-profiles-viewer
+```
