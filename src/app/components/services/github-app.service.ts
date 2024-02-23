@@ -17,8 +17,8 @@ export class GithubAppService {
       `Bearer ${this.token}`
     );
     return this.httpClient.get<GithubAPIRes>(
-      'https://api.github.com/users/' + username,
-      { headers: headers }
+      'https://api.github.com/users/' + username
+      // { headers: headers }
     );
   }
 
@@ -28,8 +28,8 @@ export class GithubAppService {
       `Bearer ${this.token}`
     );
     return this.httpClient.get<ReposList[]>(
-      `https://api.github.com/users/${username}/repos`,
-      { headers: headers }
+      `https://api.github.com/users/${username}/repos`
+      // { headers: headers }
     );
   }
 }
